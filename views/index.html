@@ -1,0 +1,229 @@
+<html>
+
+<head>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width = device-width, initial-scale = 0, user-scalable = no, minimum-scale = 1, maximum-scale = 1">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <!--link rel="stylesheet" type="text/css" href="../css/screen.css"-->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+    <script src="../scripts/bootstrap.min.js "></script>
+
+    <script src="../scripts/jquery.js "></script>
+
+    <script src="../scripts/highcharts.js "></script>
+    <script src="../scripts/jquery.tmpl.min.js "></script>
+    <script src="../scripts/jslinq.js "></script>
+    <script src="../scripts/moment.min.js "></script>
+    <script src="../scripts/superjson.js "></script>
+    <script src="../scripts/tocca.min.js "></script>
+    <script src="../scripts/transit.js "></script>
+
+    <script src="../scripts/jquery.js "></script>
+    <script src="../scripts/jsrender.js "></script>
+    <script src="../scripts/jsview.js "></script>
+    <script src="../js/base.js "></script>
+    <script src="../js/index.js "></script>
+
+
+</head>
+
+<body>
+    <div class="mainBody">
+        <div class="sideBar">
+            <img class="clickIconFirst" src="../images/fingerprints.png">
+            <img class="clickIconSecond" src="../images/user.png">
+            <img class="clickIcon" src="../images/edit.png">
+
+
+            <img class="clickIcon" src="../images/suit.png">
+
+            <img class="clickIcon" src="../images/coin.png">
+            <img class="clickIconBottom" src="../images/burger.png">
+
+        </div>
+
+        <div class="mainContainer">
+            <div class="mainHeader">
+                <div class="logoBox">Guestbook</div>
+                <div class="plusBody">
+                    <div class="plusIcon">+</div>
+                </div>
+                <img class="settingButton" src="../images/settings-xxl.png">
+                <div class="adminBox">Admin(name)</div>
+            </div>
+
+            <div class="secondHeader">
+                <div class="alphabetically">Alphabetically</div>
+                <div class="latestAdded">
+                    Latest added</div>
+                <div class="vip"> VIP</div>
+            </div>
+            <div class="dataContainer">
+                <div class="guestSideBar">
+                    <div class="guestListContainer">
+
+                        <input class="guestSearchInput" placeholder="Search                                 Phone">
+                        <div class="guestListRender"></div>
+                        <script id="guestListTemplate" type="text/x-jsrender">
+                            <div class="guestList">
+                                {^{for user}}
+                                <div class="singleguest">
+                                    <span class="guestName">  {^{:name}}</span> <span class="guestNumber">{^{:number}}</span>
+                                </div>
+                                {{/for}}
+                            </div>
+                        </script>
+
+                    </div>
+
+                    <div class="alphabitictList">
+                        <div class="alphabet "> A</div>
+                        <div class="alphabet "> B</div>
+                        <div class="alphabet "> C</div>
+                        <div class="alphabet "> D</div>
+                        <div class="alphabet "> E</div>
+                        <div class="alphabet"> F</div>
+                        <div class="alphabet"> G</div>
+                        <div class="alphabet"> H</div>
+                        <div class="alphabet"> I</div>
+                        <div class="alphabet"> J</div>
+                        <div class="alphabet"> K</div>
+                        <div class="alphabet"> L</div>
+                        <div class="alphabet"> M</div>
+                        <div class="alphabet"> N</div>
+                        <div class="alphabet"> O</div>
+                        <div class="alphabet"> P</div>
+                        <div class="alphabet"> Q</div>
+                        <div class="alphabet"> R</div>
+                        <div class="alphabet"> S</div>
+                        <div class="alphabet"> T</div>
+                        <div class="alphabet"> U</div>
+                        <div class="alphabet"> V</div>
+                        <div class="alphabet"> W</div>
+                        <div class="alphabet"> X</div>
+                        <div class="alphabet"> Y</div>
+                        <div class="alphabet"> Z</div>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+            <div class="renderingContainer"> </div>
+
+
+
+</body>
+<script id="guestDataTemplate" type="text/x-jsrender">
+    <div class="guestDetailContainer">
+        <div class="guestDetailgraph ">
+            <div class="guestTitle ">{^{:name}}</div>
+            <div class="review">
+                <span>Left 3 review </span>
+                <img class="starIcon" src="../images/star.png">
+                <img class="starIcon" src="../images/star.png">
+                <img class="starIcon" src="../images/star.png">
+                <img class="starIcon" src="../images/star.png">
+
+            </div>
+            <img class="donutImage " src="../images/donut.png ">
+
+
+        </div>
+
+        <div class="guestSeating ">
+            <div class="seatTagLine ">Seating Preference</div>
+            {^{for seatingPreference}}
+            <div class="seat3 ">{^{:name}}</div>
+            {{/for}}
+            <div class="plusButton">+</div>
+        </div>
+        <div class="guestFoodPrefernce ">
+            <div class="foodTagLine ">Food Prefrence</div>
+
+            {^{for foodPreference }}
+            <div class="tuna">{^{:name}}</div>
+            {{/for}}
+            <div class="plusButton">+</div>
+        </div>
+        <div class="guestEventHistory ">
+            <div class="guestusertitle">EVENT HISTORY</div>
+            <div class="happyHour">
+                <div class="buttonHappyHour"> HappyHour</div>
+                <div class="visit"> Visit</div>
+                <div class="numberOfVist">10</div>
+                <div class="pluSign">+</div>
+                <div class="minusSign">-</div>
+            </div>
+
+            <div class="halloweenBlock">
+                <div class="buttonHalloween"> Halloween</div>
+                <div class="visit1"> Visit</div>
+                <div class="numberOfVist1">1</div>
+                <div class="pluSign1">+</div>
+                <div class="minusSign">-</div>
+            </div>
+            <div class="halloweenplusButton">+</div>
+        </div>
+        <div class="guestUserTag">
+            <div class="userTagTitle ">User tags </div>
+            {^{for userTag}}
+            <div class="seafood"> {^{:name}}</div>
+            {{/for}}
+
+        </div>
+    </div>
+
+    <div class="leftSideBar ">
+        <div class="userInfo ">
+            <div class="userInfoTitle ">
+                USER INFO</div>
+            <div class="userInfoText ">
+                {^{:userdescribtion}}
+            </div>
+            <div class="emailLeftSideBar ">
+                <span class="email ">Mail </span>
+                <span class="emailDetail ">{^{:mail}}</span>
+            </div>
+            <div class="contactLeftSideBar ">
+                <span class="number">number </span>
+                <span class="numberDetail ">{^{:number}}</span>
+            </div>
+        </div>
+        <div class="upComingEvent ">
+            <span class="eventsTitle ">UPCOMMING EVENTS</span> {^{for upcomingevents}}
+            <div class="eventList ">
+                <div class="startMark"> </div>
+                <div class="eventButton ">{^{:date}}</div>
+                <div class="eventDate ">{^{:day}}</div>
+                <div class="eventTableNumber ">{^{:table}}</div>
+            </div> {{/for}}
+        </div>
+
+        <div class="dinningHistory ">
+
+            <span class="eventsTitle ">DINNING HISTORY</span> {^{for DinningHistory}}
+            <div class="eventList ">
+                <div class="startMarks"></div>
+                <div class="historytButton">{^{:date}}</div>
+                <div class="historytDate ">{^{:day}}</div>
+                <div class="historyTableNumber ">{^{:table}}</div>
+            </div>
+            {{/for}}
+        </div>
+
+
+    </div>
+</script>
+
+</html>
